@@ -17,7 +17,7 @@ class gen {
         };
         const begin = '\u001b[' + color + 'm',
             end = '\u001b[39m';
-        this.output = '\n' + begin + '\u001b[1m' + name.toUpperCase() + '\u001b[22m' + end + ' >>> ' + begin + text + end + '.';
+        this.output = `${begin}\u001b[1m${name.toUpperCase()}\u001b[22m${end} >>> ${begin+text+end}`;
     }
     log() {
         console.log(this.output);
